@@ -1,101 +1,55 @@
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rufina:wght@400;700&display=swap");
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
+  width: 100%;
+  padding: 54px 174px;
+  background-color: #c2efd4;
 }
 
-h1 {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 20px;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+  max-width: 1440px;
 }
 
-p {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 1.1em;
+.hero-content h1 {
+  font-family: "Rufina", serif;
+  font-size: 86px;
+  font-weight: 700;
+  color: #224f34;
+  max-width: 649px;
 }
 
-.button-group {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
+.hero-content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #267d49;
+  margin-top: 27px;
+  margin-bottom: 54px;
+  max-width: 565px;
+  line-height: 220%;
 }
 
-.btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-    transform: translateY(0);
-}
-
-.output {
-    background-color: #ecf0f1;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 1.1em;
-    border-left: 4px solid #3498db;
-}
-
-/* Lucide icon styling */
-.btn i {
-    width: 18px;
-    height: 18px;
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
-    .container {
-        margin-top: 20px;
-        padding: 15px;
-    }
-    
-    .button-group {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .btn {
-        width: 100%;
-        max-width: 200px;
-        justify-content: center;
-    }
+.hero-content button {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #224f34;
+  padding: 22px 60px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
