@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Navbar -->
+    <nav>
+      <h1>RIVO</h1>
+      <ul>
+        <li>HOME</li>
+        <li>SHOP</li>
+        <li>FEATURES</li>
+        <li>CONTACT</li>
+      </ul>
+      <div>
+        <button>LOGIN</button>
+      </div>
+    </nav>
+
     <!-- hero -->
     <section class="hero">
       <div class="hero-content">
@@ -63,9 +77,417 @@
 
     <!-- our products -->
     <section class="our-products">
-      <div class="best-selling-content">
+      <div class="our-products-content">
         <h2>Our Products</h2>
-        
+
+        <!-- Product Tabs -->
+        <div class="product-tabs">
+          <button class="tab-button active" data-tab="sale">Sale</button>
+          <button class="tab-button" data-tab="hot">Hot</button>
+          <button class="tab-button" data-tab="new-arrivals">
+            New Arrivals
+          </button>
+          <button class="tab-button" data-tab="accessories">Accessories</button>
+        </div>
+
+        <!-- Product Grid Container -->
+        <div class="product-grid-container">
+          <!-- Sale Products -->
+          <div class="product-grid active" id="sale">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-2.png" alt="Sale Product 1" />
+                <div class="product-badge sale-badge">-30%</div>
+              </div>
+              <h3>Summer Floral Dress</h3>
+              <div class="product-price">
+                <span class="current-price">$34.99</span>
+                <span class="original-price">$49.99</span>
+              </div>
+              <div class="product-rating">4.8</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-2.png" alt="Sale Product 2" />
+                <div class="product-badge sale-badge">-25%</div>
+              </div>
+              <h3>Casual Denim Jacket</h3>
+              <div class="product-price">
+                <span class="current-price">$44.99</span>
+                <span class="original-price">$59.99</span>
+              </div>
+              <div class="product-rating">4.7</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-2.png" alt="Sale Product 3" />
+                <div class="product-badge sale-badge">-40%</div>
+              </div>
+              <h3>Striped T-Shirt</h3>
+              <div class="product-price">
+                <span class="current-price">$17.99</span>
+                <span class="original-price">$29.99</span>
+              </div>
+              <div class="product-rating">4.9</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-2.png" alt="Sale Product 4" />
+                <div class="product-badge sale-badge">-35%</div>
+              </div>
+              <h3>Elegant Blazer</h3>
+              <div class="product-price">
+                <span class="current-price">$64.99</span>
+                <span class="original-price">$99.99</span>
+              </div>
+              <div class="product-rating">4.6</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-2.png" alt="Sale Product 5" />
+                <div class="product-badge sale-badge">-20%</div>
+              </div>
+              <h3>High-Waist Jeans</h3>
+              <div class="product-price">
+                <span class="current-price">$39.99</span>
+                <span class="original-price">$49.99</span>
+              </div>
+              <div class="product-rating">4.8</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-2.png" alt="Sale Product 6" />
+                <div class="product-badge sale-badge">-45%</div>
+              </div>
+              <h3>Cozy Sweater</h3>
+              <div class="product-price">
+                <span class="current-price">$27.99</span>
+                <span class="original-price">$49.99</span>
+              </div>
+              <div class="product-rating">4.7</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-2.png" alt="Sale Product 7" />
+                <div class="product-badge sale-badge">-30%</div>
+              </div>
+              <h3>Midi Skirt</h3>
+              <div class="product-price">
+                <span class="current-price">$24.99</span>
+                <span class="original-price">$34.99</span>
+              </div>
+              <div class="product-rating">4.5</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-2.png" alt="Sale Product 8" />
+                <div class="product-badge sale-badge">-25%</div>
+              </div>
+              <h3>Leather Boots</h3>
+              <div class="product-price">
+                <span class="current-price">$74.99</span>
+                <span class="original-price">$99.99</span>
+              </div>
+              <div class="product-rating">4.9</div>
+            </div>
+          </div>
+
+          <!-- Hot Products -->
+          <div class="product-grid" id="hot">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="Hot Product 1" />
+                <div class="product-badge hot-badge">🔥 HOT</div>
+              </div>
+              <h3>Trendy Crop Top</h3>
+              <div class="product-price">
+                <span class="current-price">$29.99</span>
+              </div>
+              <div class="product-rating">4.9</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="Hot Product 2" />
+                <div class="product-badge hot-badge">🔥 HOT</div>
+              </div>
+              <h3>Designer Handbag</h3>
+              <div class="product-price">
+                <span class="current-price">$89.99</span>
+              </div>
+              <div class="product-rating">4.8</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="Hot Product 3" />
+                <div class="product-badge hot-badge">🔥 HOT</div>
+              </div>
+              <h3>Oversized Hoodie</h3>
+              <div class="product-price">
+                <span class="current-price">$54.99</span>
+              </div>
+              <div class="product-rating">4.7</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="Hot Product 4" />
+                <div class="product-badge hot-badge">🔥 HOT</div>
+              </div>
+              <h3>Platform Sneakers</h3>
+              <div class="product-price">
+                <span class="current-price">$79.99</span>
+              </div>
+              <div class="product-rating">4.6</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="Hot Product 5" />
+                <div class="product-badge hot-badge">🔥 HOT</div>
+              </div>
+              <h3>Silk Blouse</h3>
+              <div class="product-price">
+                <span class="current-price">$69.99</span>
+              </div>
+              <div class="product-rating">4.8</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="Hot Product 6" />
+                <div class="product-badge hot-badge">🔥 HOT</div>
+              </div>
+              <h3>Wide Leg Pants</h3>
+              <div class="product-price">
+                <span class="current-price">$49.99</span>
+              </div>
+              <div class="product-rating">4.9</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="Hot Product 7" />
+                <div class="product-badge hot-badge">🔥 HOT</div>
+              </div>
+              <h3>Statement Earrings</h3>
+              <div class="product-price">
+                <span class="current-price">$24.99</span>
+              </div>
+              <div class="product-rating">4.7</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="Hot Product 8" />
+                <div class="product-badge hot-badge">🔥 HOT</div>
+              </div>
+              <h3>Vintage Sunglasses</h3>
+              <div class="product-price">
+                <span class="current-price">$39.99</span>
+              </div>
+              <div class="product-rating">4.8</div>
+            </div>
+          </div>
+
+          <!-- New Arrivals Products -->
+          <div class="product-grid" id="new-arrivals">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="New Arrival 1" />
+                <div class="product-badge new-badge">NEW</div>
+              </div>
+              <h3>Bohemian Maxi Dress</h3>
+              <div class="product-price">
+                <span class="current-price">$79.99</span>
+              </div>
+              <div class="product-rating">4.8</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="New Arrival 2" />
+                <div class="product-badge new-badge">NEW</div>
+              </div>
+              <h3>Minimalist Watch</h3>
+              <div class="product-price">
+                <span class="current-price">$129.99</span>
+              </div>
+              <div class="product-rating">4.9</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="New Arrival 3" />
+                <div class="product-badge new-badge">NEW</div>
+              </div>
+              <h3>Linen Shirt</h3>
+              <div class="product-price">
+                <span class="current-price">$44.99</span>
+              </div>
+              <div class="product-rating">4.7</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="New Arrival 4" />
+                <div class="product-badge new-badge">NEW</div>
+              </div>
+              <h3>Cargo Pants</h3>
+              <div class="product-price">
+                <span class="current-price">$59.99</span>
+              </div>
+              <div class="product-rating">4.6</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="New Arrival 5" />
+                <div class="product-badge new-badge">NEW</div>
+              </div>
+              <h3>Knit Cardigan</h3>
+              <div class="product-price">
+                <span class="current-price">$64.99</span>
+              </div>
+              <div class="product-rating">4.8</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="New Arrival 6" />
+                <div class="product-badge new-badge">NEW</div>
+              </div>
+              <h3>Ankle Boots</h3>
+              <div class="product-price">
+                <span class="current-price">$89.99</span>
+              </div>
+              <div class="product-rating">4.7</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="New Arrival 7" />
+                <div class="product-badge new-badge">NEW</div>
+              </div>
+              <h3>Crossbody Bag</h3>
+              <div class="product-price">
+                <span class="current-price">$54.99</span>
+              </div>
+              <div class="product-rating">4.9</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-1.png" alt="New Arrival 8" />
+                <div class="product-badge new-badge">NEW</div>
+              </div>
+              <h3>Pleated Skirt</h3>
+              <div class="product-price">
+                <span class="current-price">$42.99</span>
+              </div>
+              <div class="product-rating">4.5</div>
+            </div>
+          </div>
+
+          <!-- Accessories Products -->
+          <div class="product-grid" id="accessories">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-3.png" alt="Accessory 1" />
+              </div>
+              <h3>Gold Chain Necklace</h3>
+              <div class="product-price">
+                <span class="current-price">$34.99</span>
+              </div>
+              <div class="product-rating">4.8</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-3.png" alt="Accessory 2" />
+              </div>
+              <h3>Leather Belt</h3>
+              <div class="product-price">
+                <span class="current-price">$29.99</span>
+              </div>
+              <div class="product-rating">4.7</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-3.png" alt="Accessory 3" />
+              </div>
+              <h3>Silk Scarf</h3>
+              <div class="product-price">
+                <span class="current-price">$39.99</span>
+              </div>
+              <div class="product-rating">4.9</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-3.png" alt="Accessory 4" />
+              </div>
+              <h3>Baseball Cap</h3>
+              <div class="product-price">
+                <span class="current-price">$19.99</span>
+              </div>
+              <div class="product-rating">4.6</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-3.png" alt="Accessory 5" />
+              </div>
+              <h3>Pearl Bracelet</h3>
+              <div class="product-price">
+                <span class="current-price">$49.99</span>
+              </div>
+              <div class="product-rating">4.8</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-3.png" alt="Accessory 6" />
+              </div>
+              <h3>Canvas Tote Bag</h3>
+              <div class="product-price">
+                <span class="current-price">$24.99</span>
+              </div>
+              <div class="product-rating">4.7</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-3.png" alt="Accessory 7" />
+              </div>
+              <h3>Hair Headband</h3>
+              <div class="product-price">
+                <span class="current-price">$14.99</span>
+              </div>
+              <div class="product-rating">4.5</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/best-selling-3.png" alt="Accessory 8" />
+              </div>
+              <h3>Ring Set</h3>
+              <div class="product-price">
+                <span class="current-price">$32.99</span>
+              </div>
+              <div class="product-rating">4.9</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

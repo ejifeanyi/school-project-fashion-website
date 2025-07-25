@@ -1,7 +1,45 @@
-// Initialize Lucide icons
 lucide.createIcons();
 
-// Feedback Slider Functionality
+class ProductTabs {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    this.setupTabListeners();
+    this.showActiveTab("sale"); // Show sale tab by default
+  }
+
+  setupTabListeners() {
+    const tabButtons = document.querySelectorAll(".tab-button");
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const tabName = e.target.getAttribute("data-tab");
+        this.switchTab(tabName);
+      });
+    });
+  }
+
+  switchTab(tabName) {
+    document.querySelectorAll(".tab-button").forEach((btn) => {
+      btn.classList.remove("active");
+    });
+
+    document.querySelectorAll(".product-grid").forEach((grid) => {
+      grid.classList.remove("active");
+    });
+
+    document.querySelector(`[data-tab="${tabName}"]`).classList.add("active");
+    document.getElementById(tabName).classList.add("active");
+  }
+
+  showActiveTab(tabName) {
+    document.querySelector(`[data-tab="${tabName}"]`).classList.add("active");
+    document.getElementById(tabName).classList.add("active");
+  }
+}
+
 class FeedbackSlider {
   constructor() {
     this.currentIndex = 0;
@@ -19,7 +57,6 @@ class FeedbackSlider {
   }
 
   createChevrons() {
-    // Icons are now in HTML, just get references to them
     const leftChevron = document.querySelector(
       ".toggle-background:first-child"
     );
@@ -27,11 +64,9 @@ class FeedbackSlider {
       ".toggle-background:last-child"
     );
 
-    // Add classes for identification
     leftChevron.classList.add("left-chevron");
     rightChevron.classList.add("right-chevron");
 
-    // Set initial state
     this.setToggleButtonState(leftChevron, false);
     this.setToggleButtonState(rightChevron, false);
   }
@@ -47,7 +82,6 @@ class FeedbackSlider {
       button.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.1)";
     }
 
-    // Always keep icon color the same
     if (icon) {
       icon.style.color = "#224F34";
     }
@@ -62,11 +96,9 @@ class FeedbackSlider {
   }
 
   nextSlide() {
-    // Set current button to active state
     const rightChevron = document.querySelector(".right-chevron");
     this.setToggleButtonState(rightChevron, true);
 
-    // Reset after a short delay
     setTimeout(() => {
       this.setToggleButtonState(rightChevron, false);
     }, 200);
@@ -76,11 +108,9 @@ class FeedbackSlider {
   }
 
   previousSlide() {
-    // Set current button to active state
     const leftChevron = document.querySelector(".left-chevron");
     this.setToggleButtonState(leftChevron, true);
 
-    // Reset after a short delay
     setTimeout(() => {
       this.setToggleButtonState(leftChevron, false);
     }, 200);
@@ -91,29 +121,23 @@ class FeedbackSlider {
   }
 
   updateSlider() {
-    // Show all cards but highlight the current one
     this.feedbackCards.forEach((card, index) => {
       card.style.opacity = "1";
       card.style.display = "block";
     });
 
-    // Change background color of the current card only
     this.updateBackgroundColor();
 
-    // Update container to show all cards
     const container = document.querySelector(".feedback-card-container");
     container.style.justifyContent = "center";
   }
 
   updateBackgroundColor() {
-    // Reset all cards to default
     this.feedbackCards.forEach((card, index) => {
       if (index === this.currentIndex) {
-        // Style the active card - only change background
         card.style.backgroundColor = "#C2EFD4";
         card.style.transform = "scale(1.05)";
       } else {
-        // Style inactive cards
         card.style.backgroundColor = "#ffffff";
         card.style.transform = "scale(1)";
       }
@@ -121,7 +145,6 @@ class FeedbackSlider {
   }
 }
 
-// Countdown Timer Functionality
 class CountdownTimer {
   constructor() {
     this.targetDate = this.calculateTargetDate();
@@ -178,12 +201,10 @@ class CountdownTimer {
   }
 
   resetCountdown() {
-    // Reset to one week when countdown reaches zero
     this.targetDate = this.calculateTargetDate();
   }
 }
 
-// Button Interactions
 class ButtonEffects {
   constructor() {
     this.init();
@@ -208,10 +229,8 @@ class ButtonEffects {
                 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             }
             
-            .best-selling button:hover {
-                background-color: #f8f9fa;
+            .best-selling button {
                 border: 2px solid #224f34;
-                transform: translateY(-2px);
             }
             
             .offer-content button:hover {
@@ -231,7 +250,6 @@ class ButtonEffects {
     const buttons = document.querySelectorAll("button");
     buttons.forEach((button) => {
       button.addEventListener("click", (e) => {
-        // Create ripple effect
         const ripple = document.createElement("span");
         const rect = button.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
@@ -275,14 +293,12 @@ class ButtonEffects {
   }
 }
 
-// Smooth Scrolling for Navigation
 class SmoothScroll {
   constructor() {
     this.init();
   }
 
   init() {
-    // Add smooth scrolling to explore button
     const exploreButton = document.querySelector(".hero-content button");
     if (exploreButton) {
       exploreButton.addEventListener("click", () => {
@@ -292,7 +308,6 @@ class SmoothScroll {
       });
     }
 
-    // Add smooth scrolling to see all button
     const seeAllButton = document.querySelector(".best-selling button");
     if (seeAllButton) {
       seeAllButton.addEventListener("click", () => {
@@ -304,15 +319,121 @@ class SmoothScroll {
   }
 }
 
-// Initialize everything when DOM is loaded
+class ProductCardEffects {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    this.addProductCardHoverEffects();
+    this.addProductCardClickEffects();
+  }
+
+  addProductCardHoverEffects() {
+    const productCards = document.querySelectorAll(".product-card");
+
+    productCards.forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-8px) scale(1.02)";
+        card.style.boxShadow = "0 12px 30px rgba(0, 0, 0, 0.2)";
+      });
+
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "translateY(0) scale(1)";
+        card.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.05)";
+      });
+    });
+  }
+
+  addProductCardClickEffects() {
+    const productCards = document.querySelectorAll(".product-card");
+
+    productCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        card.style.transform = "translateY(-5px) scale(0.98)";
+
+        setTimeout(() => {
+          card.style.transform = "translateY(-8px) scale(1.02)";
+        }, 150);
+
+        console.log("Product clicked:", card.querySelector("h3").textContent);
+      });
+    });
+  }
+}
+
+class TabAnimations {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    this.addTabTransitionEffects();
+  }
+
+  addTabTransitionEffects() {
+    const style = document.createElement("style");
+    style.textContent = `
+      .product-grid {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.4s ease;
+      }
+      
+      .product-grid.active {
+        opacity: 1;
+        transform: translateY(0);
+        animation: fadeInUp 0.6s ease;
+      }
+      
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .product-card {
+        animation: slideInUp 0.6s ease both;
+      }
+      
+      .product-card:nth-child(1) { animation-delay: 0.1s; }
+      .product-card:nth-child(2) { animation-delay: 0.2s; }
+      .product-card:nth-child(3) { animation-delay: 0.3s; }
+      .product-card:nth-child(4) { animation-delay: 0.4s; }
+      .product-card:nth-child(5) { animation-delay: 0.5s; }
+      .product-card:nth-child(6) { animation-delay: 0.6s; }
+      .product-card:nth-child(7) { animation-delay: 0.7s; }
+      .product-card:nth-child(8) { animation-delay: 0.8s; }
+      
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Initialize all components
+  new ProductTabs();
   new FeedbackSlider();
   new CountdownTimer();
   new ButtonEffects();
   new SmoothScroll();
+  new ProductCardEffects();
+  new TabAnimations();
 
-  // Add loading animation
   document.body.style.opacity = "0";
   document.body.style.transition = "opacity 0.5s ease";
 
@@ -321,13 +442,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 100);
 });
 
-// Handle window resize
 window.addEventListener("resize", function () {
-  // Reinitialize components that depend on dimensions
   const slider = new FeedbackSlider();
 });
 
-// Add scroll animations
 window.addEventListener("scroll", function () {
   const sections = document.querySelectorAll("section");
 
@@ -342,7 +460,6 @@ window.addEventListener("scroll", function () {
   });
 });
 
-// Add initial styles for scroll animations
 const scrollAnimationStyle = document.createElement("style");
 scrollAnimationStyle.textContent = `
     section {
