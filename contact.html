@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Élégance Fashion House</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Marquee -->
+    <div class="marquee">
+        <p>✨ New Collection Launching Soon - 15% Off All Summer Items - Book Your Private Appointment Today ✨</p>
+    </div>
+
+    <!-- Navbar -->
+    <nav>
+        <h1>Élégance</h1>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="products.html">SHOP</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="events.html">EVENTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div>
+            <button id="loginBtn">LOGIN</button>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <p>We'd love to hear from you. Reach out for inquiries, appointments, or just to say hello.</p>
+                
+                <div class="info-item">
+                    <i data-lucide="mail"></i>
+                    <span>contact@elegance.com</span>
+                </div>
+                <div class="info-item">
+                    <i data-lucide="phone"></i>
+                    <span>+1 (555) 123-4567</span>
+                </div>
+                <div class="info-item">
+                    <i data-lucide="map-pin"></i>
+                    <span>123 Fashion Ave, Paris, France</span>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="inquiryForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="subject" required>
+                            <option value="">Select Subject</option>
+                            <option value="appointment">Book Appointment</option>
+                            <option value="inquiry">Product Inquiry</option>
+                            <option value="event">Event RSVP</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="appointment-section">
+            <h3>Book a Private Appointment</h3>
+            <p>Experience personalized shopping with one of our style consultants.</p>
+            <button onclick="window.location.href='#appointment-form'">Schedule Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h1>Élégance</h1>
+            <div class="links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

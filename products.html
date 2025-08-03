@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Élégance | Premium Fashion House</title>
+    <title>Shop | Élégance Fashion House</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
     <!-- Marquee -->
@@ -28,34 +27,30 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Discover Timeless Elegance</h1>
-            <p>
-                Experience the perfect blend of contemporary design and classic sophistication with our curated collections.
-            </p>
-            <button>Explore Collections</button>
+    <!-- Product Showcase -->
+    <section class="product-showcase">
+        <h2>Our Collections</h2>
+        
+        <div class="product-tabs">
+            <button class="tab-button active" data-tab="women">Women</button>
+            <button class="tab-button" data-tab="men">Men</button>
+            <button class="tab-button" data-tab="accessories">Accessories</button>
+            <button class="tab-button" data-tab="new-arrivals">New Arrivals</button>
         </div>
-        <div>
-            <img src="images/hero-image.png" alt="Élégance Fashion" class="hero-image">
-        </div>
-    </section>
 
-    <!-- Featured Products -->
-    <section class="featured-products">
-        <h2>Featured Collections</h2>
-        <div class="product-grid">
-            <!-- Products will be loaded via JavaScript -->
-        </div>
-    </section>
-
-    <!-- Upcoming Event Preview -->
-    <section class="event-preview">
-        <div class="event-content">
-            <h2>Spring/Summer 2024 Collection</h2>
-            <p>Join us for the exclusive launch event on June 15th</p>
-            <button onclick="window.location.href='events.html'">Learn More</button>
+        <div class="product-grid-container">
+            <div class="product-grid active" id="women">
+                <!-- Women's products will be loaded via JavaScript -->
+            </div>
+            <div class="product-grid" id="men">
+                <!-- Men's products will be loaded via JavaScript -->
+            </div>
+            <div class="product-grid" id="accessories">
+                <!-- Accessories will be loaded via JavaScript -->
+            </div>
+            <div class="product-grid" id="new-arrivals">
+                <!-- New arrivals will be loaded via JavaScript -->
+            </div>
         </div>
     </section>
 
