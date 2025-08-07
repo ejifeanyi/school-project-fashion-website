@@ -1,70 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop | Élégance Fashion House</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!-- Marquee -->
-    <div class="marquee">
-        <p>✨ New Collection Launching Soon - 15% Off All Summer Items - Book Your Private Appointment Today ✨</p>
-    </div>
-
-    <!-- Navbar -->
-    <nav>
-        <h1>Élégance</h1>
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="products.html">SHOP</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="events.html">EVENTS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-        <div>
-            <button id="loginBtn">LOGIN</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collections - VogueVibe Fashion House</title>
+    <meta
+      name="description"
+      content="Explore VogueVibe's luxury collections - Evening wear, casual luxury, and professional attire crafted with exceptional attention to detail."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="index.html">VogueVibe</a>
         </div>
+        <div class="nav-menu" id="navMenu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="products.html" class="nav-link active">Collections</a>
+          <a href="trustees.html" class="nav-link">Leadership</a>
+          <a href="inquiries.html" class="nav-link">Contact</a>
+          <a href="events.html" class="nav-link">Events</a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
 
-    <!-- Product Showcase -->
-    <section class="product-showcase">
-        <h2>Our Collections</h2>
-        
-        <div class="product-tabs">
-            <button class="tab-button active" data-tab="women">Women</button>
-            <button class="tab-button" data-tab="men">Men</button>
-            <button class="tab-button" data-tab="accessories">Accessories</button>
-            <button class="tab-button" data-tab="new-arrivals">New Arrivals</button>
-        </div>
+    <div class="announcement-bar">
+      <div class="announcement-content">
+        <span class="announcement-text"
+          >Spring Collection Launch - March 15, 2026 • Exclusive Preview
+          Available</span
+        >
+      </div>
+    </div>
 
-        <div class="product-grid-container">
-            <div class="product-grid active" id="women">
-                <!-- Women's products will be loaded via JavaScript -->
-            </div>
-            <div class="product-grid" id="men">
-                <!-- Men's products will be loaded via JavaScript -->
-            </div>
-            <div class="product-grid" id="accessories">
-                <!-- Accessories will be loaded via JavaScript -->
-            </div>
-            <div class="product-grid" id="new-arrivals">
-                <!-- New arrivals will be loaded via JavaScript -->
-            </div>
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <h1>Our Collections</h1>
+          <p>
+            Discover pieces that embody sophistication, innovation, and timeless
+            elegance
+          </p>
         </div>
-    </section>
+      </section>
 
-    <footer>
+      <section class="products-section">
+        <div class="container">
+          <div class="filters">
+            <button
+              class="filter-btn active"
+              onclick="app.products.filterProducts('all')"
+            >
+              All Collections
+            </button>
+            <button
+              class="filter-btn"
+              onclick="app.products.filterProducts('evening')"
+            >
+              Evening Wear
+            </button>
+            <button
+              class="filter-btn"
+              onclick="app.products.filterProducts('casual')"
+            >
+              Casual Luxury
+            </button>
+            <button
+              class="filter-btn"
+              onclick="app.products.filterProducts('formal')"
+            >
+              Professional
+            </button>
+          </div>
+
+          <div class="products-grid" id="productsGrid">
+            <div class="product-card" data-category="evening">
+              <div class="product-image">
+                <div class="product-badge">New</div>
+                <div class="product-overlay">
+                  <button
+                    class="btn-primary"
+                    onclick="app.products.showProductDetails('Midnight Elegance Gown', 'evening', 2850)"
+                  >
+                    View Details
+                  </button>
+                  <button
+                    class="btn-outline"
+                    onclick="app.cart.addToCart('Midnight Elegance Gown', 2850)"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>Midnight Elegance Gown</h3>
+                <p class="product-description">
+                  Silk evening gown with hand-beaded details
+                </p>
+                <div class="product-price">$2,850</div>
+              </div>
+            </div>
+
+            <div class="product-card" data-category="casual">
+              <div class="product-image">
+                <div class="product-overlay">
+                  <button
+                    class="btn-primary"
+                    onclick="app.products.showProductDetails('Summer Breeze Dress', 'casual', 685)"
+                  >
+                    View Details
+                  </button>
+                  <button
+                    class="btn-outline"
+                    onclick="app.cart.addToCart('Summer Breeze Dress', 685)"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>Summer Breeze Dress</h3>
+                <p class="product-description">
+                  Lightweight linen dress with contemporary cut
+                </p>
+                <div class="product-price">$685</div>
+              </div>
+            </div>
+
+            <div class="product-card" data-category="formal">
+              <div class="product-image">
+                <div class="product-badge">Bestseller</div>
+                <div class="product-overlay">
+                  <button
+                    class="btn-primary"
+                    onclick="app.products.showProductDetails('Executive Power Suit', 'formal', 1950)"
+                  >
+                    View Details
+                  </button>
+                  <button
+                    class="btn-outline"
+                    onclick="app.cart.addToCart('Executive Power Suit', 1950)"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>Executive Power Suit</h3>
+                <p class="product-description">
+                  Tailored wool suit with modern silhouette
+                </p>
+                <div class="product-price">$1,950</div>
+              </div>
+            </div>
+
+            <div class="product-card" data-category="evening">
+              <div class="product-image">
+                <div class="product-overlay">
+                  <button
+                    class="btn-primary"
+                    onclick="app.products.showProductDetails('Starlight Cocktail Dress', 'evening', 1475)"
+                  >
+                    View Details
+                  </button>
+                  <button
+                    class="btn-outline"
+                    onclick="app.cart.addToCart('Starlight Cocktail Dress', 1475)"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>Starlight Cocktail Dress</h3>
+                <p class="product-description">
+                  Sequined dress perfect for special occasions
+                </p>
+                <div class="product-price">$1,475</div>
+              </div>
+            </div>
+
+            <div class="product-card" data-category="casual">
+              <div class="product-image">
+                <div class="product-overlay">
+                  <button
+                    class="btn-primary"
+                    onclick="app.products.showProductDetails('Urban Chic Ensemble', 'casual', 825)"
+                  >
+                    View Details
+                  </button>
+                  <button
+                    class="btn-outline"
+                    onclick="app.cart.addToCart('Urban Chic Ensemble', 825)"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>Urban Chic Ensemble</h3>
+                <p class="product-description">
+                  Contemporary separates for versatile styling
+                </p>
+                <div class="product-price">$825</div>
+              </div>
+            </div>
+
+            <div class="product-card" data-category="formal">
+              <div class="product-image">
+                <div class="product-overlay">
+                  <button
+                    class="btn-primary"
+                    onclick="app.products.showProductDetails('Boardroom Blazer', 'formal', 1250)"
+                  >
+                    View Details
+                  </button>
+                  <button
+                    class="btn-outline"
+                    onclick="app.cart.addToCart('Boardroom Blazer', 1250)"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>Boardroom Blazer</h3>
+                <p class="product-description">
+                  Structured blazer with impeccable tailoring
+                </p>
+                <div class="product-price">$1,250</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Schedule a Personal Consultation</h2>
+            <p>
+              Experience our personalized styling service with a one-on-one
+              consultation
+            </p>
+            <button
+              class="btn-primary"
+              onclick="app.navigation.goToPage('inquiries.html')"
+            >
+              Book Appointment
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
         <div class="footer-content">
-            <h1>Élégance</h1>
-            <div class="links">
-                <a href="#">Terms</a>
-                <a href="#">Privacy</a>
-                <a href="#">Cookies</a>
+          <div class="footer-brand">
+            <h3>VogueVibe</h3>
+            <p>
+              Redefining luxury fashion with contemporary elegance and
+              innovative design.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Collections</h4>
+              <a href="products.html">Evening Wear</a>
+              <a href="products.html">Casual Luxury</a>
+              <a href="products.html">Professional</a>
             </div>
+            <div class="footer-column">
+              <h4>Company</h4>
+              <a href="trustees.html">Our Team</a>
+              <a href="events.html">Events</a>
+              <a href="inquiries.html">Contact</a>
+            </div>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 VogueVibe Fashion House. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
-    <script src="js/script.js"></script>
-</body>
+    <div id="product-modal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="app.ui.closeModal('product-modal')"
+          >&times;</span
+        >
+        <div class="modal-body">
+          <div id="productModalContent"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="cart-notification" class="notification">
+      <div class="notification-content">
+        <span id="cartMessage"></span>
+        <button
+          class="notification-close"
+          onclick="app.ui.closeNotification('cart-notification')"
+        >
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

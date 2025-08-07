@@ -1,75 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Élégance | Premium Fashion House</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-</head>
-<body>
-    <!-- Marquee -->
-    <div class="marquee">
-        <p>✨ New Collection Launching Soon - 15% Off All Summer Items - Book Your Private Appointment Today ✨</p>
-    </div>
-
-    <!-- Navbar -->
-    <nav>
-        <h1>Élégance</h1>
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="products.html">SHOP</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="events.html">EVENTS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-        <div>
-            <button id="loginBtn">LOGIN</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VogueVibe - Luxury Fashion House</title>
+    <meta
+      name="description"
+      content="VogueVibe Fashion House - Where elegance meets innovation. Discover our luxury collections and haute couture designs."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="index.html">VogueVibe</a>
         </div>
+        <div class="nav-menu" id="navMenu">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="products.html" class="nav-link">Collections</a>
+          <a href="trustees.html" class="nav-link">Leadership</a>
+          <a href="inquiries.html" class="nav-link">Contact</a>
+          <a href="events.html" class="nav-link">Events</a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <div class="announcement-bar">
+      <div class="announcement-content">
+        <span class="announcement-text"
+          >Spring Collection Launch - March 15, 2026 • Exclusive Preview
+          Available</span
+        >
+      </div>
+    </div>
+
+    <main>
+      <section class="hero">
         <div class="hero-content">
-            <h1>Discover Timeless Elegance</h1>
-            <p>
-                Experience the perfect blend of contemporary design and classic sophistication with our curated collections.
+          <div class="hero-text">
+            <h1 class="hero-title">Where Elegance<br />Meets Innovation</h1>
+            <p class="hero-subtitle">
+              Discover haute couture collections that define contemporary luxury
+              fashion
             </p>
-            <button>Explore Collections</button>
-        </div>
-        <div>
-            <img src="images/hero-image.png" alt="Élégance Fashion" class="hero-image">
-        </div>
-    </section>
-
-    <!-- Featured Products -->
-    <section class="featured-products">
-        <h2>Featured Collections</h2>
-        <div class="product-grid">
-            <!-- Products will be loaded via JavaScript -->
-        </div>
-    </section>
-
-    <!-- Upcoming Event Preview -->
-    <section class="event-preview">
-        <div class="event-content">
-            <h2>Spring/Summer 2024 Collection</h2>
-            <p>Join us for the exclusive launch event on June 15th</p>
-            <button onclick="window.location.href='events.html'">Learn More</button>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <h1>Élégance</h1>
-            <div class="links">
-                <a href="#">Terms</a>
-                <a href="#">Privacy</a>
-                <a href="#">Cookies</a>
+            <div class="hero-actions">
+              <button
+                class="btn-primary"
+                onclick="app.navigation.scrollToSection('collections')"
+              >
+                Explore Collections
+              </button>
+              <button
+                class="btn-secondary"
+                onclick="app.ui.showModal('video-modal')"
+              >
+                Watch Story
+              </button>
             </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-image-container">
+              <div class="hero-image"></div>
+              <div class="floating-card">
+                <span class="card-label">New Arrival</span>
+                <span class="card-title">Spring 2026</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <section class="collections-preview" id="collections">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Featured Collections</h2>
+            <p class="section-subtitle">
+              Curated pieces that embody our vision of modern elegance
+            </p>
+          </div>
+          <div class="collections-grid">
+            <div class="collection-card" data-collection="evening">
+              <div class="collection-image">
+                <div class="collection-overlay">
+                  <button
+                    class="btn-outline"
+                    onclick="app.navigation.goToPage('products.html')"
+                  >
+                    Explore Evening
+                  </button>
+                </div>
+              </div>
+              <div class="collection-info">
+                <h3>Evening Elegance</h3>
+                <p>Sophisticated designs for memorable occasions</p>
+              </div>
+            </div>
+            <div class="collection-card" data-collection="casual">
+              <div class="collection-image">
+                <div class="collection-overlay">
+                  <button
+                    class="btn-outline"
+                    onclick="app.navigation.goToPage('products.html')"
+                  >
+                    Explore Casual
+                  </button>
+                </div>
+              </div>
+              <div class="collection-info">
+                <h3>Casual Luxury</h3>
+                <p>Effortless style for everyday moments</p>
+              </div>
+            </div>
+            <div class="collection-card" data-collection="formal">
+              <div class="collection-image">
+                <div class="collection-overlay">
+                  <button
+                    class="btn-outline"
+                    onclick="app.navigation.goToPage('products.html')"
+                  >
+                    Explore Formal
+                  </button>
+                </div>
+              </div>
+              <div class="collection-info">
+                <h3>Professional</h3>
+                <p>Refined tailoring for the modern professional</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience">
+        <div class="container">
+          <div class="experience-content">
+            <div class="experience-text">
+              <h2>The VogueVibe Experience</h2>
+              <p>
+                From initial consultation to final fitting, we craft
+                personalized fashion experiences that celebrate your unique
+                style and vision.
+              </p>
+              <div class="experience-stats">
+                <div class="stat">
+                  <span class="stat-number" data-count="25">10+</span>
+                  <span class="stat-label">Years of Excellence</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number" data-count="10000">23000+</span>
+                  <span class="stat-label">Satisfied Clients</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number" data-count="50">20+</span>
+                  <span class="stat-label">Countries Served</span>
+                </div>
+              </div>
+            </div>
+            <div class="experience-visual">
+              <div class="experience-image"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>VogueVibe</h3>
+            <p>
+              Redefining luxury fashion with contemporary elegance and
+              innovative design.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Collections</h4>
+              <a href="products.html">Evening Wear</a>
+              <a href="products.html">Casual Luxury</a>
+              <a href="products.html">Professional</a>
+            </div>
+            <div class="footer-column">
+              <h4>Company</h4>
+              <a href="trustees.html">Our Team</a>
+              <a href="events.html">Events</a>
+              <a href="inquiries.html">Contact</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 VogueVibe Fashion House. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
-    <script src="js/script.js"></script>
-</body>
+    <div id="video-modal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="app.ui.closeModal('video-modal')"
+          >&times;</span
+        >
+        <div class="modal-body">
+          <h3>Our Story</h3>
+          <p>
+            VogueVibe was founded with a vision to bridge the gap between
+            traditional craftsmanship and contemporary design. Our journey began
+            25 years ago with a simple belief: fashion should be both timeless
+            and innovative.
+          </p>
+          <p>
+            Today, we continue to push boundaries while honoring the artistry
+            that defines true luxury.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
