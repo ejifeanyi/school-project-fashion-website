@@ -15,8 +15,8 @@
   --transition-fast: 0.2s ease;
   --transition-medium: 0.3s ease;
   --transition-slow: 0.5s ease;
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-primary: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
   --border-radius: 8px;
   --border-radius-large: 16px;
 }
@@ -98,7 +98,7 @@ body {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -6px;
   left: 0;
@@ -151,8 +151,12 @@ body {
 }
 
 @keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 main {
@@ -179,13 +183,18 @@ main {
 }
 
 .btn-primary::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: var(--transition-medium);
 }
 
@@ -299,8 +308,15 @@ main {
   overflow: hidden;
 }
 
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-large);
+}
+
 .hero-image::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ddd" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
@@ -316,7 +332,7 @@ main {
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-medium);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .card-label {
@@ -401,7 +417,7 @@ main {
 .collection-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -491,6 +507,13 @@ main {
   border-radius: var(--border-radius-large);
   position: relative;
   overflow: hidden;
+}
+
+.experience-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-large);
 }
 
 .page-header {
@@ -589,7 +612,7 @@ main {
 .product-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -657,10 +680,17 @@ main {
   overflow: hidden;
 }
 
+.leader-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-large);
+}
+
 .image-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -993,9 +1023,18 @@ main {
 
 .featured-image {
   height: 400px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background-image: url("images/spring-launch.jpg");
+  background-size: cover;
+  background-position: center;
   border-radius: var(--border-radius-large);
   position: relative;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-large);
 }
 
 .event-badge {
@@ -1391,7 +1430,7 @@ main {
 }
 
 .success-icon .check::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 10px;
   top: 16px;
@@ -1499,8 +1538,12 @@ main {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .error-message {
@@ -1529,23 +1572,35 @@ main {
     grid-template-columns: 1fr;
     gap: 60px;
   }
-  
+
   .hero-text {
     text-align: center;
   }
-  
+
   .collections-grid,
   .products-grid,
   .leadership-grid,
   .events-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  
+
   .experience-stats {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
-  
+
+  .evening-collection .collection-image {
+    background-image: url("images/evening-collection.jpg");
+  }
+
+  .casual-collection .collection-image {
+    background-image: url("images/casual-collection.jpg");
+  }
+
+  .formal-collection .collection-image {
+    background-image: url("images/formal-collection.jpg");
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1556,11 +1611,11 @@ main {
   .container {
     padding: 0 20px;
   }
-  
+
   .nav-container {
     padding: 0 20px;
   }
-  
+
   .nav-menu {
     position: fixed;
     top: 80px;
@@ -1575,110 +1630,110 @@ main {
     transition: var(--transition-medium);
     box-shadow: var(--shadow-medium);
   }
-  
+
   .nav-menu.active {
     left: 0;
   }
-  
+
   .nav-link {
     width: 100%;
     padding: 16px 0;
     border-bottom: 1px solid var(--border-color);
   }
-  
+
   .nav-toggle {
     display: flex;
   }
-  
+
   .nav-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
-  
+
   .nav-toggle.active span:nth-child(2) {
     opacity: 0;
   }
-  
+
   .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
   }
-  
+
   .hero {
     padding: 60px 0;
   }
-  
+
   .hero-actions {
     justify-content: center;
   }
-  
+
   .btn-primary,
   .btn-secondary {
     width: 100%;
     max-width: 280px;
   }
-  
+
   .collections-grid,
   .products-grid,
   .leadership-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .experience-stats {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  
+
   .filters,
   .event-filters {
     justify-content: flex-start;
     overflow-x: auto;
     padding-bottom: 10px;
   }
-  
+
   .filter-btn {
     white-space: nowrap;
     flex-shrink: 0;
   }
-  
+
   .form-row {
     grid-template-columns: 1fr;
   }
-  
+
   .newsletter-form {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .newsletter-form input[type="email"] {
     min-width: unset;
     width: 100%;
   }
-  
+
   .event-details {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .event-date {
     align-self: flex-start;
   }
-  
+
   .modal-content {
     width: 95%;
     margin: 20px;
   }
-  
+
   .modal-body {
     padding: 24px;
   }
-  
+
   .page-header {
     padding: 60px 0;
   }
-  
+
   .section-title {
     font-size: 32px;
   }
-  
+
   .hero-title {
     font-size: 40px;
   }
@@ -1688,52 +1743,52 @@ main {
   .hero-title {
     font-size: 32px;
   }
-  
+
   .section-title {
     font-size: 28px;
   }
-  
+
   .hero-actions {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .btn-primary,
   .btn-secondary {
     width: 100%;
   }
-  
+
   .floating-card {
     bottom: 10px;
     right: 10px;
     padding: 16px 20px;
   }
-  
+
   .announcement-text {
     font-size: 12px;
   }
-  
+
   .event-highlights {
     gap: 8px;
   }
-  
+
   .highlight {
     font-size: 14px;
   }
-  
+
   .hero-image {
     height: 300px;
   }
-  
+
   .experience-image,
   .featured-image {
     height: 300px;
   }
-  
+
   .newsletter-content h2 {
     font-size: 28px;
   }
-  
+
   .newsletter-content p {
     font-size: 16px;
   }
@@ -1745,11 +1800,11 @@ main {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   .announcement-content {
     animation: none;
   }
-  
+
   .announcement-text {
     display: block;
     text-align: center;
@@ -1894,7 +1949,11 @@ main {
 }
 
 .highlight-text {
-  background: linear-gradient(120deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(
+    120deg,
+    var(--secondary-color) 0%,
+    var(--secondary-color) 100%
+  );
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
   background-position: 0 88%;

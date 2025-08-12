@@ -1,247 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leadership - VogueVibe Fashion House</title>
-    <meta name="description" content="Meet the visionary leaders behind VogueVibe Fashion House. Our leadership team combines decades of industry experience with innovative design thinking.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <meta
+      name="description"
+      content="Meet the visionary leaders behind VogueVibe Fashion House. Our leadership team combines decades of industry experience with innovative design thinking."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <a href="index.html">VogueVibe</a>
-            </div>
-            <div class="nav-menu" id="navMenu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="products.html" class="nav-link">Collections</a>
-                <a href="trustees.html" class="nav-link active">Leadership</a>
-                <a href="inquiries.html" class="nav-link">Contact</a>
-                <a href="events.html" class="nav-link">Events</a>
-            </div>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="index.html">VogueVibe</a>
         </div>
+        <div class="nav-menu" id="navMenu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="products.html" class="nav-link">Collections</a>
+          <a href="trustees.html" class="nav-link active">Leadership</a>
+          <a href="inquiries.html" class="nav-link">Contact</a>
+          <a href="events.html" class="nav-link">Events</a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
 
     <div class="announcement-bar">
-        <div class="announcement-content">
-            <span class="announcement-text">Spring Collection Launch - March 15, 2026 • Exclusive Preview Available</span>
-        </div>
+      <div class="announcement-content">
+        <span class="announcement-text"
+          >Spring Collection Launch - March 15, 2026 • Exclusive Preview
+          Available</span
+        >
+      </div>
     </div>
 
     <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Leadership Team</h1>
-                <p>Meet the visionaries who shape VogueVibe's creative direction and strategic vision</p>
+      <section class="page-header">
+        <div class="container">
+          <h1>Leadership Team</h1>
+          <p>
+            Meet the visionaries who shape VogueVibe's creative direction and
+            strategic vision
+          </p>
+        </div>
+      </section>
+
+      <section class="leadership-section">
+        <div class="container">
+          <div class="leadership-grid">
+            <div class="leader-card">
+              <div class="leader-image">
+                <img src="images/john.jpg" alt="Unyime John" />
+              </div>
+              <div class="leader-info">
+                <h3>Unyime John</h3>
+                <p class="leader-title">Group leader</p>
+              </div>
             </div>
-        </section>
 
-        <section class="leadership-section">
-            <div class="container">
-                <div class="leadership-grid">
-                    <div class="leader-card" data-leader="sophia">
-                        <div class="leader-image">
-                            <div class="image-overlay">
-                                <button class="btn-outline" onclick="app.leadership.showLeaderDetails('sophia')">
-                                    View Profile
-                                </button>
-                            </div>
-                        </div>
-                        <div class="leader-info">
-                            <h3>Sophia Chen</h3>
-                            <p class="leader-title">Founder & Creative Director</p>
-                            <p class="leader-experience">15+ years in haute couture</p>
-                            <div class="leader-achievements">
-                                <span class="achievement">CFDA Award Winner</span>
-                                <span class="achievement">Vogue 40 Under 40</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="leader-card" data-leader="marcus">
-                        <div class="leader-image">
-                            <div class="image-overlay">
-                                <button class="btn-outline" onclick="app.leadership.showLeaderDetails('marcus')">
-                                    View Profile
-                                </button>
-                            </div>
-                        </div>
-                        <div class="leader-info">
-                            <h3>Marcus Williams</h3>
-                            <p class="leader-title">Chief Executive Officer</p>
-                            <p class="leader-experience">20+ years in luxury retail</p>
-                            <div class="leader-achievements">
-                                <span class="achievement">Forbes 30 Under 30</span>
-                                <span class="achievement">Harvard MBA</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="leader-card" data-leader="elena">
-                        <div class="leader-image">
-                            <div class="image-overlay">
-                                <button class="btn-outline" onclick="app.leadership.showLeaderDetails('elena')">
-                                    View Profile
-                                </button>
-                            </div>
-                        </div>
-                        <div class="leader-info">
-                            <h3>Elena Rodriguez</h3>
-                            <p class="leader-title">Head of Design</p>
-                            <p class="leader-experience">12+ years in fashion design</p>
-                            <div class="leader-achievements">
-                                <span class="achievement">Parsons Graduate</span>
-                                <span class="achievement">Sustainable Design Advocate</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="leader-card" data-leader="james">
-                        <div class="leader-image">
-                            <div class="image-overlay">
-                                <button class="btn-outline" onclick="app.leadership.showLeaderDetails('james')">
-                                    View Profile
-                                </button>
-                            </div>
-                        </div>
-                        <div class="leader-info">
-                            <h3>James Thompson</h3>
-                            <p class="leader-title">Chief Marketing Officer</p>
-                            <p class="leader-experience">18+ years in luxury marketing</p>
-                            <div class="leader-achievements">
-                                <span class="achievement">Digital Innovation Leader</span>
-                                <span class="achievement">Brand Strategy Expert</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="leader-card" data-leader="maya">
-                        <div class="leader-image">
-                            <div class="image-overlay">
-                                <button class="btn-outline" onclick="app.leadership.showLeaderDetails('maya')">
-                                    View Profile
-                                </button>
-                            </div>
-                        </div>
-                        <div class="leader-info">
-                            <h3>Maya Patel</h3>
-                            <p class="leader-title">Operations Director</p>
-                            <p class="leader-experience">14+ years in operations</p>
-                            <div class="leader-achievements">
-                                <span class="achievement">Supply Chain Expert</span>
-                                <span class="achievement">Lean Six Sigma</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="leader-card" data-leader="david">
-                        <div class="leader-image">
-                            <div class="image-overlay">
-                                <button class="btn-outline" onclick="app.leadership.showLeaderDetails('david')">
-                                    View Profile
-                                </button>
-                            </div>
-                        </div>
-                        <div class="leader-info">
-                            <h3>David Kim</h3>
-                            <p class="leader-title">Technology Director</p>
-                            <p class="leader-experience">10+ years in fashion tech</p>
-                            <div class="leader-achievements">
-                                <span class="achievement">AI Innovation Pioneer</span>
-                                <span class="achievement">Digital Transformation</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="leader-card">
+              <div class="leader-image">
+                <img src="images/micheal.jpg" alt="Michael Ugonna Mark" />
+              </div>
+              <div class="leader-info">
+                <h3>Michael Ugonna Mark</h3>
+                <p class="leader-title">Assistant group leader</p>
+              </div>
             </div>
-        </section>
 
-        <section class="values-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Values</h2>
-                    <p>The principles that guide our leadership and shape our company culture</p>
-                </div>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <div class="icon innovation"></div>
-                        </div>
-                        <h3>Innovation</h3>
-                        <p>We continuously push the boundaries of fashion design and technology to create unprecedented experiences.</p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <div class="icon craftsmanship"></div>
-                        </div>
-                        <h3>Craftsmanship</h3>
-                        <p>Every piece reflects our commitment to exceptional quality and attention to the finest details.</p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <div class="icon sustainability"></div>
-                        </div>
-                        <h3>Sustainability</h3>
-                        <p>We're dedicated to responsible practices that protect our planet for future generations.</p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <div class="icon diversity"></div>
-                        </div>
-                        <h3>Diversity</h3>
-                        <p>We celebrate diverse perspectives and create fashion that empowers people of all backgrounds.</p>
-                    </div>
-                </div>
+            <div class="leader-card">
+              <div class="leader-image">
+                <img src="images/queen.jpg" alt="Deyinde-Phillips Queen Oluwafadekemi" />
+              </div>
+              <div class="leader-info">
+                <h3>Deyinde-Phillips Queen Oluwafadekemi</h3>
+                <p class="leader-title">Group member</p>
+              </div>
             </div>
-        </section>
+
+            <div class="leader-card">
+              <div class="leader-image">
+                <img src="images/stephen.jpg" alt="Stephen Obi" />
+              </div>
+              <div class="leader-info">
+                <h3>Stephen Obi</h3>
+                <p class="leader-title">Group member</p>
+              </div>
+            </div>
+
+            <div class="leader-card">
+              <div class="leader-image">
+                <img src="images/bareeq.jpg" alt="Bareeq Anidu" />
+              </div>
+              <div class="leader-info">
+                <h3>Bareeq Anidu</h3>
+                <p class="leader-title">Group member</p>
+              </div>
+            </div>
+
+            <div class="leader-card">
+              <div class="leader-image">
+                <img src="images/rebecca.jpg" alt="Oladipupo Oluwadamilola Rebecca" />
+              </div>
+              <div class="leader-info">
+                <h3>Oladipupo Oluwadamilola Rebecca</h3>
+                <p class="leader-title">Group member</p>
+              </div>
+            </div>
+
+            <div class="leader-card">
+              <div class="leader-image">
+                <img src="images/tracy.jpg" alt="Ojila Tracy Oyikowo" />
+              </div>
+              <div class="leader-info">
+                <h3>Ojila Tracy Oyikowo</h3>
+                <p class="leader-title">Group member</p>
+              </div>
+            </div>
+
+            <div class="leader-card">
+              <div class="leader-image">
+                <img src="images/blessing.jpg" alt="Anake Blessing Ushang" />
+              </div>
+              <div class="leader-info">
+                <h3>Anake Blessing Ushang</h3>
+                <p class="leader-title">Group member</p>
+              </div>
+            </div>
+
+            <div class="leader-card">
+              <div class="leader-image">
+                <img src="images/ifeanyi.jpg" alt="Ifeanyi Emmanuel Joseph" />
+              </div>
+              <div class="leader-info">
+                <h3>Ifeanyi Emmanuel Joseph</h3>
+                <p class="leader-title">Group member</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="values-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Our Values</h2>
+            <p>
+              The principles that guide our leadership and shape our company
+              culture
+            </p>
+          </div>
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">
+                <div class="icon innovation"></div>
+              </div>
+              <h3>Innovation</h3>
+              <p>
+                We continuously push the boundaries of fashion design and
+                technology to create unprecedented experiences.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">
+                <div class="icon craftsmanship"></div>
+              </div>
+              <h3>Craftsmanship</h3>
+              <p>
+                Every piece reflects our commitment to exceptional quality and
+                attention to the finest details.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">
+                <div class="icon sustainability"></div>
+              </div>
+              <h3>Sustainability</h3>
+              <p>
+                We're dedicated to responsible practices that protect our planet
+                for future generations.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">
+                <div class="icon diversity"></div>
+              </div>
+              <h3>Diversity</h3>
+              <p>
+                We celebrate diverse perspectives and create fashion that
+                empowers people of all backgrounds.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>VogueVibe</h3>
-                    <p>Redefining luxury fashion with contemporary elegance and innovative design.</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Collections</h4>
-                        <a href="products.html">Evening Wear</a>
-                        <a href="products.html">Casual Luxury</a>
-                        <a href="products.html">Professional</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <a href="trustees.html">Our Team</a>
-                        <a href="events.html">Events</a>
-                        <a href="inquiries.html">Contact</a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>VogueVibe</h3>
+            <p>
+              Redefining luxury fashion with contemporary elegance and
+              innovative design.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Collections</h4>
+              <a href="products.html">Evening Wear</a>
+              <a href="products.html">Casual Luxury</a>
+              <a href="products.html">Professional</a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 VogueVibe Fashion House. All rights reserved.</p>
+            <div class="footer-column">
+              <h4>Company</h4>
+              <a href="trustees.html">Our Team</a>
+              <a href="events.html">Events</a>
+              <a href="inquiries.html">Contact</a>
             </div>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 VogueVibe Fashion House. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
-    <div id="leader-modal" class="modal">
-        <div class="modal-content leader-modal-content">
-            <span class="modal-close" onclick="app.ui.closeModal('leader-modal')">&times;</span>
-            <div class="modal-body">
-                <div id="leaderModalContent"></div>
-            </div>
-        </div>
-    </div>
-
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
